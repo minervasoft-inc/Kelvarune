@@ -1,0 +1,4 @@
+.DS_Store
+examples/*/secrets.h
+.pio/
+build/
