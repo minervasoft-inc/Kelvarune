@@ -242,8 +242,26 @@ void KelvaruneClass::sendMessage(const String& json) {
     totalTxBytes_ += json.length();
 
     if (txCharacteristic_ != nullptr && bleConnected_) {
-        txCharacteristic_->setValue(json.c_str());
-        txCharacteristic_->notify();
+        // setValue()+引数無しnotify()はble_gatts_chr_updated()経由になり、この経路は
+        // 内部送信キューが溢れて実際には送れていない場合でも常にtrueを返す
+        // （NimBLECharacteristic::sendValue()のnullptr分岐を参照。戻り値で失敗を検知できない）。
+        // 値を直接渡すnotify(value, length)はble_gattc_notify_custom()経由になり、
+        // こちらは実際の送信失敗（内部キュー枯渇等）をbool戻り値で報告してくれるため、
+        // こちらを使い、失敗した場合は短い間隔を空けて数回リトライする。
+        const uint8_t* data = reinterpret_cast<const uint8_t*>(json.c_str());
+        size_t length = json.length();
+        const int kMaxAttempts = 5;
+        bool sent = false;
+        for (int attempt = 0; attempt < kMaxAttempts; attempt++) {
+            if (txCharacteristic_->notify(data, length)) {
+                sent = true;
+                break;
+            }
+            delay(20);
+        }
+        if (!sent) {
+            Serial.println("Kelvarune: notify() failed after retries, message may be lost");
+        }
         // notify()を間隔なく連続で呼ぶと、BLEスタック内部で後続の通知が
         // 取りこぼされることがあるため、送信のたびに短い間隔を空ける。
         // (hello直後にhello_ack/device_info/cmd_def...と連続送信するため必要)

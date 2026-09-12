@@ -271,7 +271,7 @@ private:
     unsigned long bootCount_ = 0;
 
     static const int kProtocolVersion = 1;
-    static constexpr const char* kSdkVersion = "1.0.0";
+    static constexpr const char* kSdkVersion = "1.0.1";
     static const unsigned long kSystemMetricsIntervalMillis = 2000;
     static const uint16_t kWebSocketPort = 8081;
 };
