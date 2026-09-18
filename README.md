@@ -24,7 +24,7 @@ You only need the transport-specific dependency for the transport you actually u
 
 ## Installation
 
-### Arduino Library Manager (recommended, once listed)
+### Arduino Library Manager
 
 Sketch → Include Library → Manage Libraries… → search "Kelvarune" → Install.
 

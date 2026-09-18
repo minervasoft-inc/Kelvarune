@@ -24,7 +24,7 @@
 
 ## インストール方法
 
-### Arduino Library Manager（登録後はこちらを推奨）
+### Arduino Library Manager
 
 スケッチ → ライブラリをインクルード → ライブラリを管理… → 「Kelvarune」を検索 → インストール。
 
