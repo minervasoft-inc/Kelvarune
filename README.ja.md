@@ -70,6 +70,9 @@ BLE の代わりに Wi-Fi を使う場合は、`begin()` の代わりに `Kelvar
 
 デバイスが公開する Dashboard/Console/Commands を見るには Kelvarune アプリが必要です: https://minervasoft.co.jp/kelvarune
 
+- [App Store](https://apps.apple.com/jp/app/id6810004105)（iOS）
+- [Google Play](https://play.google.com/store/apps/details?id=jp.co.minervasoft.kelvarune&hl=ja)（Android）
+
 ## API 概要
 
 | メソッド | 用途 |

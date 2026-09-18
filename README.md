@@ -70,6 +70,9 @@ To use Wi-Fi instead of BLE, call `Kelvarune.beginWiFi("My Device", ssid, passwo
 
 The Kelvarune app is required to view the Dashboard/Console/Commands your device exposes: https://minervasoft.co.jp/kelvarune
 
+- [App Store](https://apps.apple.com/us/app/id6810004105) (iOS)
+- [Google Play](https://play.google.com/store/apps/details?id=jp.co.minervasoft.kelvarune&hl=en) (Android)
+
 ## API overview
 
 | Method | Purpose |
