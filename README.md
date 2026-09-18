@@ -2,7 +2,7 @@
 
 [日本語版 README はこちら](README.ja.md)
 
-Arduino library for ESP32 that lets your device be monitored, debugged, and controlled from the **[Kelvarune](https://minervasoft.co.jp/kelvarune)** mobile app (iOS / Android) over Bluetooth Low Energy or Wi-Fi.
+Arduino library for ESP32 that lets your device be monitored, debugged, and controlled from the **[Kelvarune](#getting-the-app)** mobile app (iOS / Android) over Bluetooth Low Energy or Wi-Fi.
 
 Add a few lines to your sketch and get, in the app, without writing any UI code:
 

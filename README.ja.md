@@ -2,7 +2,7 @@
 
 [English README is here](README.md)
 
-**[Kelvarune](https://minervasoft.co.jp/kelvarune)** アプリ（iOS / Android）から、Bluetooth Low Energy または Wi-Fi 経由でデバイスを監視・デバッグ・操作できるようにする、ESP32向け Arduino ライブラリです。
+**[Kelvarune](#アプリの入手)** アプリ（iOS / Android）から、Bluetooth Low Energy または Wi-Fi 経由でデバイスを監視・デバッグ・操作できるようにする、ESP32向け Arduino ライブラリです。
 
 スケッチに数行追加するだけで、UI コードを一切書かずにアプリ側で以下が使えるようになります:
 
